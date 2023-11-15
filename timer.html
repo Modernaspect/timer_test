@@ -18,6 +18,11 @@
 
     <audio id="audio" src="./timersound_bibibibip.mp3"></audio>
 
+    <p id="uagent">agent</p></h3>
+    <script type='text/javascript'>
+    document.getElementById("uagent").innerHTML = navigator.userAgent;
+    </script>
+
     <script>
       function startTimer() {
         var timeInMinutes = document.getElementById("timeInMinutes").value;
