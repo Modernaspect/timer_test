@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <title>JavaScript 타이머</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <h1>JavaScript 타이머</h1>
@@ -12,6 +15,8 @@
     <button onclick="startTimer()">타이머 시작</button>
 
     <p id="timer"></p>
+
+    <audio id="audio" src="./timersound_bibibibip.mp3"></audio>
 
     <script>
       function startTimer() {
@@ -30,7 +35,8 @@
 
           if (--timeInSeconds < 0) {
             clearInterval(timer);
-            alert("타이머 종료!");
+            document.getElementById("audio").play();
+            alert("도착 1분전!");
           }
         }, 1000);
       }
